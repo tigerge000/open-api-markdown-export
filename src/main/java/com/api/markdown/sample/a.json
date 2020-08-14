@@ -1,0 +1,144 @@
+{
+  "apis": [
+    {
+      "apiName": "c.g.o.p.e.s.opendemo#queryorder",
+      "desc": "查询订单信息",
+      "models": {
+        "c.g.o.p.e.s.p.GeneObj<c.g.o.p.e.s.p.OrderInfo>": {
+          "className": "com.ggj.open.platform.export.sample.pojo.GeneObj",
+          "dataType": "OBJECT",
+          "description": "返回结构",
+          "name": "ReturnType",
+          "properties": [
+            {
+              "className": "com.ggj.open.platform.export.sample.pojo.OrderInfo",
+              "dataType": "OBJECT",
+              "description": "数据",
+              "name": "data",
+              "required": false,
+              "typeName": "c.g.o.p.e.s.p.OrderInfo"
+            },
+            {
+              "className": "int",
+              "dataType": "NUMBER",
+              "description": "响应码",
+              "name": "code",
+              "required": false,
+              "typeName": "NUMBER"
+            }
+          ],
+          "typeName": "c.g.o.p.e.s.p.GeneObj<c.g.o.p.e.s.p.OrderInfo>"
+        },
+        "c.g.o.p.e.s.p.User": {
+          "className": "com.ggj.open.platform.export.sample.pojo.User",
+          "dataType": "OBJECT",
+          "description": "用户模型",
+          "name": "user",
+          "properties": [
+            {
+              "className": "java.lang.String",
+              "dataType": "STRING",
+              "description": "姓名",
+              "name": "name",
+              "required": true,
+              "typeName": "STRING"
+            },
+            {
+              "className": "java.lang.String",
+              "dataType": "STRING",
+              "description": "性别,取值[MALE,LADY]",
+              "name": "gender",
+              "required": false,
+              "typeName": "STRING"
+            },
+            {
+              "className": "java.lang.Integer",
+              "dataType": "NUMBER",
+              "description": "年龄,1~999",
+              "name": "age",
+              "required": false,
+              "typeName": "NUMBER"
+            },
+            {
+              "className": "java.lang.String",
+              "dataType": "STRING",
+              "description": "邮箱",
+              "name": "email",
+              "required": false,
+              "typeName": "STRING"
+            },
+            {
+              "className": "java.util.Map",
+              "dataType": "MAP",
+              "description": "下属",
+              "name": "underling",
+              "required": false,
+              "typeName": "STRING",
+              "typeValue": "c.g.o.p.e.s.p.User"
+            }
+          ],
+          "typeName": "c.g.o.p.e.s.p.User"
+        },
+        "c.g.o.p.e.s.p.OrderInfo": {
+          "className": "com.ggj.open.platform.export.sample.pojo.OrderInfo",
+          "dataType": "OBJECT",
+          "description": "订单信息",
+          "name": "Order",
+          "properties": [
+            {
+              "className": "com.ggj.open.platform.export.sample.pojo.User",
+              "dataType": "OBJECT",
+              "description": "发货人",
+              "name": "sender",
+              "required": false,
+              "typeName": "c.g.o.p.e.s.p.User"
+            },
+            {
+              "className": "com.ggj.open.platform.export.sample.pojo.User",
+              "dataType": "OBJECT",
+              "description": "收货人",
+              "name": "receiver",
+              "required": false,
+              "typeName": "c.g.o.p.e.s.p.User"
+            },
+            {
+              "className": "boolean",
+              "dataType": "BOOLEAN",
+              "description": "价格",
+              "name": "price",
+              "required": false,
+              "typeName": "BOOLEAN"
+            }
+          ],
+          "typeName": "c.g.o.p.e.s.p.OrderInfo"
+        }
+      },
+      "name": "queryOrder",
+      "parameters": [
+        {
+          "className": "java.lang.Long",
+          "dataType": "NUMBER",
+          "description": "店铺id",
+          "index": 0,
+          "name": "shopId",
+          "typeName": "NUMBER"
+        },
+        {
+          "className": "java.lang.Long",
+          "dataType": "NUMBER",
+          "description": "订单id",
+          "index": 1,
+          "name": "orderId",
+          "typeName": "NUMBER"
+        }
+      ],
+      "returnType": {
+        "className": "com.ggj.open.platform.export.sample.pojo.GeneObj",
+        "dataType": "OBJECT",
+        "typeName": "c.g.o.p.e.s.p.GeneObj<c.g.o.p.e.s.p.OrderInfo>"
+      }
+    }
+  ],
+  "group": "订单",
+  "type": "com.ggj.open.platform.export.sample.OpenDemoService"
+}
