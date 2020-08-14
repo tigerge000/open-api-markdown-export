@@ -1,6 +1,11 @@
 ## 根据swagger注解，自动生成对外接口文档
 
 
+## 使用姿势
+public static void main(String[] args) throws IOException {
+DocGenerator.printMdText(OpenDemoService.class);
+}
+
 ## 1、查询订单信息
 #### API
 > c.g.o.p.e.s.opendemo#queryorder
